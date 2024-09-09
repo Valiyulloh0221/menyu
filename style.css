@@ -3,7 +3,7 @@ a{
 }
 body{
   text-align: center;
-  height: 100vh;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +33,7 @@ button{
 }
 @media (max-width: 780px){
   body{
-    height: 100vh;
+    height: 95vh;
     max-width: 780px;
   }
 }
