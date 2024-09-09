@@ -31,3 +31,9 @@ button{
   width: 20px;
   height: 20px;
 }
+@media (max-width: 780px){
+  body{
+    height: 100vh;
+    max-width: 780px;
+  }
+}
