@@ -33,7 +33,7 @@ button{
 }
 @media (max-width: 780px){
   body{
-    height: 95vh;
+    height: 80vh;
     max-width: 780px;
   }
 }
