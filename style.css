@@ -1,45 +1,98 @@
-
-*{
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
-header{
-  padding: 20px;
+
+body {
+  background-image: url('images/osh.jpg'); /* Orqa fon rasmi */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+header {
+  padding: 20px;
+  text-align: center;
+}
+
 .container {
   display: flex;
-  justify-content: center; /* Tugmalarni markazga joylash */
-  flex-wrap: wrap; /* Agar ekran kichik bo‘lsa, tugmalar pastga tushadi */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
+
 button {
-  background-color: #000; /* Tugmalar fon rangi */
-  border: 2px solid #00ff99; /* Tugmalar chegarasi */
-  border-radius: 50px; /* Burchaklarni yumshatish */
-  padding: 10px 20px; /* Ichki bo'shliq */
-  margin: 5px; /* Tugmalar orasidagi bo'shliq */
-  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #00ff99;
+  border-radius: 30px;
+  padding: 8px 15px;
+  font-size: 16px;
   transition: 0.3s;
+  width: 180px;
 }
 
 button a {
-  text-decoration: none; /* Havolani tagiga chizilmasin */
-  color: #fff; /* Matn rangi */
+  color: #fff;
   font-weight: bold;
-  font-size: 16px;
 }
 
 button:hover {
-  background-color: #00ff99; /* Hover effekti */
-  border-color: #fff;
+  background-color: #00ff99;
+  border-color: white;
 }
 
 button a:hover {
   color: #000;
 }
-body{
-  background-image: url('images/osh.jpg');
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+
+main {
+  flex-grow: 1; /* Asosiy kontent ekranga moslashadi */
+}
+
+/* Footer */
+footer {
+  background-color: rgba(34, 34, 34, 0.95);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.footer-content a {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.footer-content a:hover {
+  color: #FF4500;
+}
+
+/* Mobil uchun moslashuv */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 90%;
+  }
+
+  footer {
+    font-size: 14px;
+  }
 }
