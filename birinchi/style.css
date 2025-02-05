@@ -1,66 +1,153 @@
-/* Umumiy stillar */
+/* Umumiy reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
+/* Tana (body) */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Barcha sahifada umumiy scrollni o‘chiradi */
 }
 
+/* Header */
 header {
-    background-color: #222;
-    color: white;
-    padding: 20px;
-    font-size: 24px;
-    position: relative;
+  background-color: #222; /* To‘liq qora fon */
+  color: white;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 70px; /* Header balandligi */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); /* Pastki soyani qo'shamiz */
 }
 
 .back-button {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+  background-color: #00ff99;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  right: 20px; /* O‘ng tarafga joylashadi */
+  top: 50%;
+  transform: translateY(-50%); /* Tugmani vertikal markazlash */
+  transition: all 0.3s;
 }
 
+.back-button:hover {
+  background-color: white;
+  color: #00ff99;
+}
+
+
+/* Asosiy kontent (main) */
+main {
+  flex-grow: 1;
+  overflow-y: auto; /* Faqat asosiy qism scroll qiladi */
+  padding: 100px 20px 100px; /* Header va footer uchun joy qoldiramiz */
+  position: relative;
+  z-index: 1; /* Footerning ostiga tushmasligi uchun */
+}
+
+/* Menyu elementlari */
 .menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .menu-item {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    width: 250px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .menu-item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
+.menu-item h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.menu-item p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Footer */
 footer {
-    background-color: #222;
-    color: white;
-    padding: 20px;
-    margin-top: 20px;
+  background-color: rgba(34, 34, 34, 0.95);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000; /* Ovqatlar ustiga chiqmasligi uchun */
 }
 
-footer a {
-    color: #FFD700;
-    font-weight: bold;
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.footer-content a {
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.footer-content a:hover {
+  color: #FF4500;
+}
+
+/* Mobil uchun moslashuv */
+@media (max-width: 768px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+
+  .back-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
 }
