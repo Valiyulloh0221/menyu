@@ -1,41 +1,38 @@
-a{
+*{
+  padding: 0;
+  box-sizing: border-box;
   text-decoration: none;
 }
-body{
-  text-align: center;
-  height: 95vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  flex-direction: column;
+header{
+  padding: 20px;
 }
-button{
+.container {
+  display: flex;
+  justify-content: center; /* Tugmalarni markazga joylash */
+  flex-wrap: wrap; /* Agar ekran kichik bo‘lsa, tugmalar pastga tushadi */
+}
+button {
+  background-color: #000; /* Tugmalar fon rangi */
+  border: 2px solid #00ff99; /* Tugmalar chegarasi */
+  border-radius: 50px; /* Burchaklarni yumshatish */
+  padding: 10px 20px; /* Ichki bo'shliq */
+  margin: 5px; /* Tugmalar orasidagi bo'shliq */
   cursor: pointer;
-  border: none;
-  background-color: #6ea5dc;
-  color: #FFF;
-  width: 80px;
-  font-size: 18px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
+  transition: 0.3s;
 }
-.bayroqlar{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+
+button a {
+  text-decoration: none; /* Havolani tagiga chizilmasin */
+  color: #fff; /* Matn rangi */
+  font-weight: bold;
+  font-size: 16px;
 }
-.rusbayroq{
-  width: 20px;
-  height: 20px;
+
+button:hover {
+  background-color: #00ff99; /* Hover effekti */
+  border-color: #fff;
 }
-@media (max-width: 780px){
-  body{
-    height: 80vh;
-    max-width: 780px;
-  }
+
+button a:hover {
+  color: #000;
 }
