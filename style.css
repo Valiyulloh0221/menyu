@@ -1,3 +1,4 @@
+
 *{
   padding: 0;
   box-sizing: border-box;
@@ -35,4 +36,10 @@ button:hover {
 
 button a:hover {
   color: #000;
+}
+body{
+  background-image: url('images/osh.jpg');
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
