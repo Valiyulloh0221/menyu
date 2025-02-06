@@ -1,3 +1,4 @@
+/* Umumiy uslublar */
 * {
   margin: 0;
   padding: 0;
@@ -17,50 +18,65 @@ body {
   min-height: 100vh;
 }
 
+/* Header */
 header {
   padding: 20px;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Header orqa fon */
+  color: #ffffff; /* Header matn rangi */
+  font-size: 32px;
+  font-weight: bold;
+  border-bottom: 2px solid #00ff99;
 }
 
-.container {
+/* Main */
+main {
+  flex-grow: 1; /* Asosiy kontent ekranga moslashadi */
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px; /* Tugmalar orasidagi masofa */
+  padding: 20px;
 }
 
-button {
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Tugmalar orasidagi masofa */
+  padding: 20px;
+}
+
+.menu button {
   background-color: rgba(0, 0, 0, 0.8);
   border: 2px solid #00ff99;
   border-radius: 30px;
-  padding: 8px 15px;
-  font-size: 16px;
+  padding: 10px 80px; /* Tugmalar ichki masofasini kattalashtirish */
+  font-size: 18px; /* Tugma matni hajmi kattalashdi */
   transition: 0.3s;
-  width: 180px;
+  width: 200px; /* Tugmalar kengligi */
 }
 
-button a {
+.menu button a {
   color: #fff;
   font-weight: bold;
 }
 
-button:hover {
+.menu button:hover {
   background-color: #00ff99;
   border-color: white;
 }
 
-button a:hover {
+.menu button a:hover {
   color: #000;
-}
-
-main {
-  flex-grow: 1; /* Asosiy kontent ekranga moslashadi */
 }
 
 /* Footer */
 footer {
-  background-color: rgba(34, 34, 34, 0.95);
-  color: white;
+  background-color: #000000; /* Footer orqa fon rangini qora qilib qo'ying */
+  color: #ffffff; /* Matnni ko'rinarli oq rangda qiling */
   text-align: center;
   padding: 20px 0;
   font-size: 16px;
@@ -70,7 +86,7 @@ footer {
 .footer-content {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px; /* Footer elementlari orasidagi masofa */
   max-width: 400px;
   margin: 0 auto;
 }
@@ -86,13 +102,13 @@ footer {
 
 /* Mobil uchun moslashuv */
 @media (max-width: 768px) {
-  .container {
+  .menu {
     flex-direction: column;
     align-items: center;
   }
 
-  button {
-    width: 90%;
+  .menu button {
+    width: 90%; /* Mobilda kenglikni moslashtirish */
   }
 
   footer {

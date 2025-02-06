@@ -108,8 +108,10 @@ main {
 
 /* Footer */
 footer {
-  background-color: rgba(34, 34, 34, 0.95);
-  color: white;
+  background-color: #000000; /* Footer orqa fon rangini qora qilib qo'ying */
+  color: #ffffff; /* Matnni ko'rinarli oq rangda qiling */
+  background-blend-mode: normal; /* Aralashuvni yo'q qilish uchun */
+  background-image: none; /* Orqa fon tasvirini o'chirish uchun */
   text-align: center;
   padding: 20px 0;
   font-size: 16px;
@@ -131,6 +133,11 @@ footer {
   color: #FFD700;
   font-weight: bold;
 }
+
+footer span, footer p, footer a {
+    text-shadow: none; /* Yozuvlarning soyasini olib tashlash */
+}
+
 
 .footer-content a:hover {
   color: #FF4500;
